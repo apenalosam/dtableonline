@@ -1,0 +1,158 @@
+.typeahead__list, .typeahead__dropdown {
+    position: relative;
+    top: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+.typeahead__list > li {
+    border: none;
+}
+
+.typeahead__list li a {
+    padding: .55rem;
+    background-color: #FFFFFF;
+    color: #0097CF;
+    /***************************/
+    border: 1px solid  #0097CF;
+    border-left: 6px solid #0097CF;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    /***************************/
+    /*box-shadow: 0 5px 10px rgba(49, 97, 160, 0.5);*/
+}
+
+.typeahead__list li a:hover {
+    cursor: pointer;
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+
+
+.ProfileCard {
+    position: relative;
+    padding: 5px;
+}
+
+.ProfileCard-avatar {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 170px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfileCard-details {
+    padding-left: 170px;
+}
+
+.ProfileCard-description {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.ProfileCard-stats {
+    float: right;
+    text-align: right;
+}
+
+.ProfileCard-stat {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.ProfileCard-stat + .ProfileCard-stat {
+    margin-left: 10px;
+}
+
+blockquote{
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    /*border-left: 5px solid #64b5f6;*/
+    border-left: 5px solid #428bca;
+    border-top: 1px solid #428bca;
+    border-right: 2px solid #428bca;
+    border-bottom: 2px solid #428bca;
+    
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    
+    font-size: 12px;
+}
+
+/* MensajeVacio */
+.MensajeVacio {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    border-color: #d73814;
+
+}
+
+.MensajeVacio>strong {
+    color: #d73814;
+}
+
+/********************************************/
+#mdialTamanio{
+    width: 60% !important;
+}
+
+/***********Tab******************/
+
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+    border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+    margin-bottom: -1px;
+}
+
+/*******************************/
+/*** PANEL PRIMARY ***/
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+    background-color: #3071a9;
+    border-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+    color: #428bca;
+    background-color: #fff;
+    border-color: #428bca;
+    border-bottom-color: transparent;
+}
+
+/***********************************************/
+.thumbnail {
+    position:relative;
+    border-color: #428bca;
+    -webkit-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+	-moz-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+	box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+}
+
+.thumbnail:hover .caption {
+    top:0%;
+}

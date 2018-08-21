@@ -1,0 +1,576 @@
+/*******************/
+.bottom-right-button{
+    float: right; 
+    margin:auto;
+    width: 200px;
+}
+.stylish{
+    font-family: 'MedievalSharp', cursive;
+    color: #000;
+}
+.inventory{
+    position: static;
+    margin-top: 52px;
+    margin-left: 115px;
+    width:80px;
+    height:30px;
+}
+.char-id{
+    position: static;
+    margin: 50px auto auto 115px;
+    min-width:50px!important;
+    max-width:99.99%!important;
+    transition: width 0.25s;
+    text-align:center;
+}
+.char-name{    
+    position: static;
+    margin-top: 142px;
+    margin-left: 115px;
+    width:380px;
+    height:30px;
+}
+.player-name{
+    position: static;
+    margin-top: -60px;
+    margin-left: 1062px;
+    width:300px;
+    height:30px;
+    text-align: center;
+}
+.class-select{
+    position: static;
+    margin-top: -60px; 
+    margin-left: 600px;
+    width:70px;
+    height:30px;
+    font-size: small;
+}
+.class-lvl{
+    position: static;
+    margin-left: 760px;
+    margin-top: -60px;
+    width: 70px;
+    height:30px;
+    text-align: center;    
+}
+.background-select{
+    position: static;
+    margin-top: -60px; 
+    margin-left: 840px;
+    width:70px;
+    height:30px;
+    font-size: small;
+}
+.race-select{
+    position: static;
+    margin-top: -2px; 
+    margin-left: 600px;
+    width:220px;
+    height:30px;
+}
+.align-select{
+    position: static;
+    margin-top: -30px; 
+    margin-left: 840px;
+    width:210px;
+    height:30px;
+}
+.exp-points{
+    position: static;
+    margin-left: 1076px;
+    margin-top: -30px;
+    width: 185px;
+    height:30px;    
+    text-align:center;
+}
+.prof-bonus{
+    position: static;
+    margin-top:88px;
+    margin-left: 100px;
+    text-align: center;
+    width:85px;
+}
+.insp-bonus{
+    position: static;
+    margin-top: 40px;
+    margin-left: 100px;
+    text-align: center;
+    width:85px;
+}
+.third-pane{
+    margin-top:-75px;
+}
+.armor-class{
+    position: static;
+    margin-top: 0px;
+    margin-left: 500px;
+    text-align: center;
+    width:75px;
+    font-size: 29px;
+}
+.dex-modifier{
+    position: static;
+    margin-top:5px;
+    margin-left: 49px;
+    text-align: center;
+    width:65px;
+    font-size: 20px;
+}
+.armor-value{
+    position: static;
+    margin-top:5px;
+    margin-left: 22px;
+    text-align: center;
+    width:65px;
+    font-size: 20px;
+}
+.shield-value{
+    position: static;
+    margin-top:5px;
+    margin-left: 22px;
+    text-align: center;
+    width:65px;
+    font-size: 20px;
+}
+.misc-value{
+    position: static;
+    margin-top:5px;
+    margin-left: 22px;
+    text-align: center;
+    width:65px;
+    font-size: 20px;
+}
+.initiative{
+    position: static;
+    margin-top:-15px;
+    margin-left: 30px;
+    text-align: center;
+    width:100px;
+    font-size: 30px;
+}
+.speed{
+    position: static;
+    margin-top:-5px;
+    margin-right: 75px;
+    text-align: center;
+    width:139px;
+    font-size: 20px;
+    line-height: 2.0
+}
+.fourth-pane{
+    float:left;
+    position:static;
+    display:block;
+    margin-top: 0px;
+    margin-left: 100px;
+    width: 87px;
+}
+.no-border{
+    border: 0px solid;
+    outline: none;
+    background: transparent;
+}
+.inner-stat{    
+    position: static;
+    margin-top: 65px;
+    margin-left: 5px
+}
+.stat-modifier{
+    position: static;
+    margin-top: 13px;
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+.passive-wisdom{
+    position: static;
+    margin-top: 60px;
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+.items{
+    position: static;
+    margin-top: 33px;
+    margin-left: -31px;
+    width: 380px;
+    height: 295px;
+    font-size: 17px;
+}
+.fifth-pane{
+    float:left;
+    position:static;
+    display:block;
+    margin-top: 0px;
+    width: 20px;
+    margin-left: 41px;
+    padding-top: 64px;
+}
+.diamond{
+    margin-left:-15px; 
+    background-color: transparent;
+    border:1px solid #000000;
+    transform: rotate(45deg); 
+    width:12px; 
+    height: 12px;
+}
+.diamond-typetwo{
+    margin-left:3px; 
+    background-color: transparent;
+    border:1px solid #000000;
+    transform: rotate(45deg); 
+    width:12px; height: 12px;
+}
+.sixth-pane{
+    float:left;
+    position:static;
+    display:block;
+    margin-top: 0px;
+    margin-left: 7px;
+    padding-top: 62px;
+}
+.saveLbl{
+    font-style: normal;
+}
+.mid-lbl{
+    margin-top: -4px;
+}
+.seventh-pane{
+}
+.max-hp{
+    position: static;    
+    margin-left: 195px;
+    text-align: center;
+    width: 190px;
+    margin-top: 110px;
+}
+.current-hp{
+    position: static;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.total-hit-dice{
+    position: static;
+    width: 150px;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+.hit-dice{
+    position: static;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 32px;
+}
+.lvl-up{
+    position: static;
+    margin-top:40px;
+    margin-right:160px;
+    float:right;
+}
+.currency{
+    position: static;
+    margin-top: 24px;
+    float: left;
+}
+.div-bckImg{ 
+    width: 1349px;
+    background-size: 1360px; 
+    background-repeat: no-repeat;
+}
+.bckImg{ 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position-y: 60px;
+}
+.menuButton{
+    font-family: 'MedievalSharp', cursive; 
+    color: #000;
+    background-color: #d9d9d9; 
+    border-color: #800000;
+    width: 370px;
+    height: 200px;
+    font-size: 36px;
+    margin: 8% 4% 4% 4%;
+}
+.table-header{
+    text-align: center;
+    vertical-align: middle;
+    background-color: #800000; border-color: #800000;
+}
+.rightButton{
+    float: right;
+}
+td:nth-of-type(6){
+    display:none
+}
+.divider{
+    margin:5%;
+}
+.navbar-default {
+    background-color: #3071a9;
+    border-color: #0097cf;
+}
+.navbar-default .navbar-brand {
+    color: #fdfdfd;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #f6f4f4;
+}
+.navbar-default .navbar-text {
+    color: #fdfdfd;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fdfdfd;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #f6f4f4;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    background-color: #3071a9;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #fdfdfd;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #f6f4f4;
+    background-color: #0097cf;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+    background-color: #0097cf;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #f6f4f4;
+    background-color: #0097cf;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #f6f4f4;
+    background-color: #0097cf;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #f6f4f4;
+    background-color: #0097cf;
+}
+.navbar-default .navbar-toggle {
+    border-color: #0097cf;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #0097cf;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fdfdfd;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #fdfdfd;
+}
+.navbar-default .navbar-link {
+    color: #fdfdfd;
+}
+.navbar-default .navbar-link:hover {
+    color: #f6f4f4;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #fdfdfd;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #f6f4f4;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #f6f4f4;
+        background-color: #0097cf;
+    }
+}
+/*******************/
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+
+
+/*******************/
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .6em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+  
+  /* most of the rest of this is opinion */
+  font-family:'MedievalSharp', cursive;
+  text-align: center;
+  
+  /* 
+    Let the content set the size of the tooltips 
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  /*max-width: 90px;*/
+  width: 130px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
