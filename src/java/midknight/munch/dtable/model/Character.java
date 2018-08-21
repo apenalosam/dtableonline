@@ -19,7 +19,7 @@ import midknight.munch.dtable.util.Util;
  * @author KODE
  */
 @Entity
-@Table(name="characters")
+@Table(name="characters", schema="dynamic_dnd")
 public class Character implements Serializable{
     @Id
     @Column(name="character_id")

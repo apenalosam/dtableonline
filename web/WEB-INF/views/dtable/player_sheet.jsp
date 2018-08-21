@@ -110,7 +110,6 @@
                     <label tooltip="Regular speed" class="stylish" style="width: 30px; font-size: 20px; margin-left: 10px">R/</label>
                     <label tooltip="Speed while wearing heavy armor" class="stylish" style="width: 30px; font-size: 20px;">H/</label>
                     <label tooltip="Swimming speed" class="stylish" style="width: 30px; font-size: 20px;">S/</label>
-                    <label tooltip="Flying speed" class="stylish" style="width: 22px; font-size: 20px;">F</label>
                     <br/>
                     <label id="speed" class="stylish speed"></label>                       
                 </div>
@@ -339,9 +338,6 @@
         }
         else {
             speeds += '0/';
-        }
-        if ('${r.flightSpeed}' !== "") {
-            speeds += '${r.flightSpeed}';
         }
         else {
             speeds += '0';

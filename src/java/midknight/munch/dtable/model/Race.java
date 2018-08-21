@@ -45,8 +45,6 @@ public class Race implements Serializable{
     private String typicalAlignment;
     @Column(name="race_size")
     private String size;
-    @Column(name="flight_speed")
-    private int flightSpeed;
     @Column(name="land_speed")
     private int landSpeed;
     @Column(name="armor_speed")
@@ -70,13 +68,12 @@ public class Race implements Serializable{
         this.avgAge = Integer.parseInt(request.getParameter("avgAge"));
         this.typicalAlignment = Util.decode(request.getParameter("typicalAlignment"));
         this.size = Util.decode(request.getParameter("size"));
-        this.flightSpeed = Integer.parseInt(request.getParameter("hitDie"));
         this.landSpeed = Integer.parseInt(request.getParameter("landSpeed"));
         this.armorSpeed = Integer.parseInt(request.getParameter("armorSpeed"));
         this.swimSpeed = Integer.parseInt(request.getParameter("swimSpeed"));
     }
 
-    public Race(int raceId, String raceName, int baseStr, int baseDex, int baseCon, int baseInt, int baseWis, int baseCha, int adulthood, int avgAge, String typicalAlignment, String size, int flightSpeed, int landSpeed, int armorSpeed, int swimSpeed) {
+    public Race(int raceId, String raceName, int baseStr, int baseDex, int baseCon, int baseInt, int baseWis, int baseCha, int adulthood, int avgAge, String typicalAlignment, String size, int landSpeed, int armorSpeed, int swimSpeed) {
         this.raceId = raceId;
         this.raceName = raceName;
         this.baseStr = baseStr;
@@ -89,7 +86,6 @@ public class Race implements Serializable{
         this.avgAge = avgAge;
         this.typicalAlignment = typicalAlignment;
         this.size = size;
-        this.flightSpeed = flightSpeed;
         this.landSpeed = landSpeed;
         this.armorSpeed = armorSpeed;
         this.swimSpeed = swimSpeed;
@@ -189,14 +185,6 @@ public class Race implements Serializable{
 
     public void setSize(String size) {
         this.size = size;
-    }
-
-    public int getFlightSpeed() {
-        return flightSpeed;
-    }
-
-    public void setFlightSpeed(int flightSpeed) {
-        this.flightSpeed = flightSpeed;
     }
 
     public int getLandSpeed() {

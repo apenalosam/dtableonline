@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author XMY6267
  */
 @Entity
-@Table(name="campaigns")
+@Table(name="campaigns", schema="dynamic_dnd")
 public class Campaign implements Serializable{
     @Id
     @Column(name="campaign_id")
