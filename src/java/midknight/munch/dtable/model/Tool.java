@@ -28,7 +28,7 @@ public class Tool implements Serializable{
     @Column(name="cost")
     private int cost;
     @Column(name="weight")
-    private int weight;
+    private float weight;
     @Column(name="tool_type_name")
     private String toolTypeName;
     @Column(name="description")
@@ -66,7 +66,7 @@ public class Tool implements Serializable{
         this.cost = cost;
     }
 
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
 
