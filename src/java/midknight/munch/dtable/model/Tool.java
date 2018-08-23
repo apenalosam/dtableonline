@@ -33,6 +33,8 @@ public class Tool implements Serializable{
     private String toolTypeName;
     @Column(name="description")
     private String description;
+    @Column(name="coin")
+    private String coin;
 
     public int getToolId() {
         return toolId;
@@ -88,14 +90,20 @@ public class Tool implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }    
+
+    public String getCoin() {
+        return coin;
     }
 
-    
+    public void setCoin(String coin) {
+        this.coin = coin;
+    }
     
     public Tool() {
     }
 
-    public Tool(int toolId, String toolName, int toolType, int cost, int weight, String toolTypeName, String description) {
+    public Tool(int toolId, String toolName, int toolType, int cost, int weight, String toolTypeName, String description, String coin) {
         this.toolId = toolId;
         this.toolName = toolName;
         this.toolType = toolType;
@@ -103,6 +111,7 @@ public class Tool implements Serializable{
         this.weight = weight;
         this.toolTypeName = toolTypeName;
         this.description = description;
+        this.coin = coin;
     }
     
     

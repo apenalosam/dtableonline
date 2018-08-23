@@ -20,24 +20,22 @@ import javax.persistence.Table;
 public class Language implements Serializable{
     @Id
     @Column(name="language_id")
-    private int languageId;
-    @Column(name="name")
+    private int id;
+    @Column(name="language_name")
     private String name;
+    @Column(name="language_type")
+    private int type;
+    @Column(name="language_script")
+    private String script;
 
     public Language() {
     }
 
-    public Language(int languageId, String name) {
-        this.languageId = languageId;
+    public Language(int id, String name, int type, String script) {
+        this.id = id;
         this.name = name;
-    }
-
-    public int getLanguageId() {
-        return languageId;
-    }
-
-    public void setLanguageId(int languageId) {
-        this.languageId = languageId;
+        this.type = type;
+        this.script = script;
     }
 
     public String getName() {
@@ -46,6 +44,30 @@ public class Language implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getScript() {
+        return script;
+    }
+
+    public void setScript(String script) {
+        this.script = script;
     }
     
     
