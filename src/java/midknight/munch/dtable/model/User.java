@@ -12,7 +12,7 @@ import midknight.munch.dtable.util.Util;
  * @author Andres Peñalosa
  */
 @Entity
-@Table(name = "users", schema="dynamic_dnd")
+@Table(name = "users")
 public class User implements Serializable{
     @Id
     @Column(name="username")

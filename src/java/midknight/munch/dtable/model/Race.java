@@ -43,7 +43,7 @@ public class Race implements Serializable{
     private int avgAge;
     @Column(name="typical_alignment")
     private String typicalAlignment;
-    @Column(name="race_size")
+    @Column(name="size")
     private String size;
     @Column(name="land_speed")
     private int landSpeed;

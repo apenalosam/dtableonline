@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author KODE
  */
 @Entity
-@Table(name="vehicles")
+@Table(name="vehicles", schema="dunganddrag")
 public class Vehicle implements Serializable{
     @Id
     @Column(name="vehicle_id")

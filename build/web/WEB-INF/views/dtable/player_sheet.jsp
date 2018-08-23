@@ -107,9 +107,9 @@
                 <label id="miscValue" class="stylish misc-value">0</label>
                 <label id="initiative" class="stylish initiative">0</label>
                 <div style="float: right; margin-top: -10px;">
-                    <label tooltip="Regular speed" class="stylish" style="width: 30px; font-size: 20px; margin-left: 10px">R/</label>
+                    <label tooltip="Regular speed" class="stylish" style="width: 30px; font-size: 20px; margin-left: 30px">R/</label>
                     <label tooltip="Speed while wearing heavy armor" class="stylish" style="width: 30px; font-size: 20px;">H/</label>
-                    <label tooltip="Swimming speed" class="stylish" style="width: 30px; font-size: 20px;">S/</label>
+                    <label tooltip="Swimming speed" class="stylish" style="width: 30px; font-size: 20px;">S</label>
                     <br/>
                     <label id="speed" class="stylish speed"></label>                       
                 </div>
@@ -117,17 +117,17 @@
 
             <div class="input-group fourth-pane" style="width: 87px;">
                 <input name="str" id="str" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.str}"/>
-                <label id="strModifier" class="no-border text-center stylish stat-modifier"></label>            
+                <label id="strModifier" class="no-border text-center stylish stat-modifier">+0</label>            
                 <input name="dex" id="dex" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.dex}"/>                
-                <label id="dexModifier" class="no-border text-center stylish stat-modifier"></label>                
+                <label id="dexModifier" class="no-border text-center stylish stat-modifier">+0</label>                
                 <input name="con" id="con" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.con}"/>                
-                <label id="conModifier" class="no-border text-center stylish stat-modifier"></label>                
+                <label id="conModifier" class="no-border text-center stylish stat-modifier">+0</label>                
                 <input name="intl" id="intl" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.intl}"/>
-                <label id="intModifier" class="no-border text-center stylish stat-modifier"></label>
+                <label id="intModifier" class="no-border text-center stylish stat-modifier">+0</label>
                 <input name="wis" id="wis" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.wis}"/>
-                <label id="wisModifier" class="no-border text-center stylish stat-modifier"></label>
+                <label id="wisModifier" class="no-border text-center stylish stat-modifier">+0</label>
                 <input name="cha" id="cha" type="number" class="form-control no-border text-center stylish inner-stat" value="${c.cha}"/>
-                <label id="chaModifier" class="no-border text-center stylish stat-modifier"></label>
+                <label id="chaModifier" class="no-border text-center stylish stat-modifier">+0</label>
                 <br/>
                 <label id="pasWis" class="passive-wisdom stylish no-border text-center">0</label>
                 <textarea class="stylish items no-border"></textarea>
