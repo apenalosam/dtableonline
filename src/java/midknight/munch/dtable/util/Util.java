@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import midknight.munch.dtable.model.Background;
 
 /**
  *
@@ -94,6 +95,14 @@ public class Util {
         fecha.set(Integer.parseInt(v[2]), (Integer.parseInt(v[1]) - 1), Integer.parseInt(v[0]));
         return fecha;
     }
+    
+//    public static Background translateBackground(List<Object[]> datos){
+//        Background background = null;                
+//        int id, languagesNumber, toolTwo, toolTypeTwo;
+//        String name, skillOne, skillTwo, toolOne, toolTypeOne;
+//        
+//        return background;
+//    }
     
 //    public static List<String> updateLists (List<String> oldList, List<String> newList){
 //        List<String> result = null;

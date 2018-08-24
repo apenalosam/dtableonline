@@ -10,11 +10,11 @@ import midknight.munch.dtable.model.Background;
 
 /**
  *
- * @author XMY6267
+ * @author KODE
  */
 public abstract interface BackgroundService {
-    public Background create(Background b);
-    public Background get(Integer id);
-    public List<Background> getAll();
-    public boolean exists(Integer id);
+    public abstract Background get(Integer id);
+    public abstract List<Background> getAll();
+    public abstract boolean exists(Integer id);
+    public abstract Background create(Background b);
 }

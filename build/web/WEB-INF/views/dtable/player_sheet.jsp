@@ -71,7 +71,7 @@
                 <select name="backgroundId" id="backgroundId" type="text" class="background-select form-control stylish" style="width:205px;">
                     <option value="-1" disabled selected >-Select your background-</option>
                     <c:forEach var="background" items="${backgrounds}">
-                        <option value="${background.backgroundId}">${background.backgroundName}</option>
+                        <option value="${background.id}">${background.name}</option>
                     </c:forEach>
                 </select>
 
@@ -107,8 +107,8 @@
                 <label id="miscValue" class="stylish misc-value">0</label>
                 <label id="initiative" class="stylish initiative">0</label>
                 <div style="float: right; margin-top: -10px;">
-                    <label tooltip="Regular speed" class="stylish" style="width: 30px; font-size: 20px; margin-left: 30px">R/</label>
-                    <label tooltip="Speed while wearing heavy armor" class="stylish" style="width: 30px; font-size: 20px;">H/</label>
+                    <label tooltip="Regular speed" class="stylish" style="width: 30px; font-size: 20px; margin-left: 30px">R /</label>
+                    <label tooltip="Speed while wearing heavy armor" class="stylish" style="width: 30px; font-size: 20px;">H /</label>
                     <label tooltip="Swimming speed" class="stylish" style="width: 30px; font-size: 20px;">S</label>
                     <br/>
                     <label id="speed" class="stylish speed"></label>                       
@@ -208,7 +208,7 @@
                 <label class="saveLbl stylish mid-lbl" id="pesSave">+0</label><br/>
             </div>  
             <div class="input-group seventh-pane" style="width:430px">
-                <label id="maxHp" class="max-hp stylish">0</label>
+                <label name="maxHp" id="maxHp" class="max-hp stylish">0</label>
                 <br/>
                 <input name="currentHp" id="currentHp" type="number" style="width:300px;" class="form-control text-center stylish current-hp" value="${c.currentHp}"/>
                 <br/>
@@ -318,6 +318,7 @@
         $('#alignId').val('${c.alignId}');
         setClas();
         setRace();
+        setBackground();
     }
     function setSpeed() {
         var speeds = '';
@@ -334,10 +335,7 @@
             speeds += '0/';
         }
         if ('${r.landSpeed}' !== "") {
-            speeds += '${r.swimSpeed}/';
-        }
-        else {
-            speeds += '0/';
+            speeds += '${r.swimSpeed}';
         }
         else {
             speeds += '0';
@@ -383,13 +381,16 @@
         $('#chaModifier').html(setMod(${r.baseCha}));
         setSpeed();
     }
+    function setBackground(){
+        $('#backgroundId').val('${c.backgroundId}');
+    }
     function getRace(selection) {
         $.ajax({
             url: '${contextPath}/dtable/getRace/' + selection,
             type: 'POST',
             cache: false,
             success: function (response) {
-                var speeds = response.landSpeed + "/" + response.armorSpeed + "/" + response.swimSpeed + "/" + response.flightSpeed;
+                var speeds = response.landSpeed + "/" + response.armorSpeed + "/" + response.swimSpeed;
                 if (addedRaceStats) {
                     $('#str').val(parseInt($('#str').val()) - parseInt($('#raceStr').html()));
                     $('#dex').val(parseInt($('#dex').val()) - parseInt($('#raceDex').html()));
@@ -436,7 +437,7 @@
             type: 'POST',
             cache: false,
             success: function (response) {
-                $('#maxHp').html(parseInt(response.hitPoints + (response.hitPointsOptional*($('#lvl').val()))));
+                setHp(response.hitPoints, response.hitPointsOptional);
                 $('#hitDice').html($('#lvl').val());
                 $('#totalHitDice').html($('#lvl').val()+'d'+response.hitDie);
             },
@@ -502,6 +503,10 @@
         if ($(item).is(':checked')) {
             $('#' + lblName).html();
         }
+    }
+    function setHp(hitDie, hpAdd){
+        var maxHp = parseInt(hitDie) + parseInt($('#conModifier').text()) + parseInt((hpAdd*($('#lvl').val()-1)));
+        $('#maxHp').html(maxHp);
     }
 </script>
 <%@ include file="../footer.jsp" %>

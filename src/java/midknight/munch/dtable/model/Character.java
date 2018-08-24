@@ -19,7 +19,7 @@ import midknight.munch.dtable.util.Util;
  * @author KODE
  */
 @Entity
-@Table(name="characters")
+@Table(name="characters", schema="dynamic_dnd")
 public class Character implements Serializable{
     @Id
     @Column(name="character_id")
@@ -36,6 +36,8 @@ public class Character implements Serializable{
     private int lvl;
     @Column(name="race_id")
     private int raceId;
+    @Column(name="background_id")
+    private int backgroundId;
     @Column(name="campaign_id")
     private int campaignId;
     @Column(name="added_str")
@@ -74,6 +76,8 @@ public class Character implements Serializable{
     private String others;
     @Column(name="current_hp")
     private int currentHp;
+    @Column(name="max_hp")
+    private int maxHp;
 
     public Character() {
     }
@@ -84,6 +88,8 @@ public class Character implements Serializable{
         this.playerName = Util.decode(request.getParameter("playerName"));
         this.classId = Integer.parseInt(request.getParameter("classId"));
         this.campaignId = Integer.parseInt(request.getParameter("campaignId"));
+        this.raceId = Integer.parseInt(request.getParameter("raceId"));
+        this.backgroundId = Integer.parseInt(request.getParameter("backgroundId"));
         this.lvl = Integer.parseInt(request.getParameter("lvl"));
         this.str = Integer.parseInt(request.getParameter("str"));
         this.dex = Integer.parseInt(request.getParameter("dex"));
@@ -102,6 +108,8 @@ public class Character implements Serializable{
         this.armors = Util.decode(request.getParameter("armors"));
         this.items = Util.decode(request.getParameter("items"));
         this.others = Util.decode(request.getParameter("others"));
+        this.currentHp = Integer.parseInt(request.getParameter("currentHp"));
+        this.maxHp = Integer.parseInt(request.getParameter("maxHp"));
     }
 
     public Character update(Character chara){
@@ -131,6 +139,7 @@ public class Character implements Serializable{
         this.items = chara.getItems();
         this.others = chara.getOthers();
         this.currentHp = chara.getCurrentHp();
+        this.maxHp = chara.getMaxHp();
         return this;
     }
     
@@ -302,6 +311,14 @@ public class Character implements Serializable{
         this.raceId = raceId;
     }
 
+    public int getBackgroundId() {
+        return backgroundId;
+    }
+
+    public void setBackgroundId(int backgroundId) {
+        this.backgroundId = backgroundId;
+    }
+
     public int getCampaignId() {
         return campaignId;
     }
@@ -345,6 +362,14 @@ public class Character implements Serializable{
     @Override
     public String toString() {
         return "Character{" + "characterId=" + characterId + ", username=" + username + ", characterName=" + characterName + ", classId=" + classId + ", lvl=" + lvl + ", raceId=" + raceId + ", campaignId=" + campaignId + ", str=" + str + ", dex=" + dex + ", con=" + con + ", intl=" + intl + ", wis=" + wis + ", cha=" + cha + ", expPoints=" + expPoints + ", creationDate=" + creationDate + ", alignId=" + alignId + '}';
+    }
+
+    public int getMaxHp() {
+        return maxHp;
+    }
+
+    public void setMaxHp(int maxHp) {
+        this.maxHp = maxHp;
     }
     
 }

@@ -10,9 +10,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author XMY6267
+ * @author KODE
  */
-
-public abstract interface BackgroundRepository extends JpaRepository<Background, Integer>{
+public interface BackgroundRepository extends JpaRepository<Background, Integer>{
     
 }

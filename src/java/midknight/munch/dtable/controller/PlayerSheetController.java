@@ -113,7 +113,9 @@ public class PlayerSheetController {
         List<Clas> selectClas = clasService.getAll();
         List<Align> alignments = alignService.findAll();
         List<Race> races = raceService.findAll();
+        List<Background> backgrounds = backgroundService.getAll();
         mav.addObject("races", races);
+        mav.addObject("backgrounds", backgrounds);
         mav.addObject("alignments", alignments);
         mav.addObject("user", user);
         mav.addObject("c", c);

@@ -13,17 +13,16 @@ import javax.persistence.Table;
 
 /**
  *
- * @author XMY6267
+ * @author KODE
  */
 @Entity
 @Table(name="backgrounds", schema="dunganddrag")
 public class Background implements Serializable{
-    
     @Id
     @Column(name="background_id")
-    private int backgroundId;
-    @Column(name="background_ name")
-    private String backgroundName;
+    private int id;
+    @Column(name="background_name")
+    private String name;
     @Column(name="skill_one")
     private String skillOne;
     @Column(name="skill_two")
@@ -42,88 +41,88 @@ public class Background implements Serializable{
     public Background() {
     }
 
-    public Background(int backgroundId, String backgroundName, String skill1, String skill2, int languages, String tool1, int tool2, String toolType1, int toolType2) {
-        this.backgroundId = backgroundId;
-        this.backgroundName = backgroundName;
-        this.skillOne = skill1;
-        this.skillTwo = skill2;
-        this.languagesNumber = languages;
-        this.toolOne = tool1;
-        this.toolTwo = tool2;
-        this.toolTypeOne = toolType1;
-        this.toolTypeTwo = toolType2;
+    public Background(int id, String name, String skillOne, String skillTwo, int languagesNumber, String toolOne, int toolTwo, String toolTypeOne, int toolTypeTwo) {
+        this.id = id;
+        this.name = name;
+        this.skillOne = skillOne;
+        this.skillTwo = skillTwo;
+        this.languagesNumber = languagesNumber;
+        this.toolOne = toolOne;
+        this.toolTwo = toolTwo;
+        this.toolTypeOne = toolTypeOne;
+        this.toolTypeTwo = toolTypeTwo;
     }
 
-    public int getBackgroundId() {
-        return backgroundId;
+    public int getId() {
+        return id;
     }
 
-    public void setBackgroundId(int backgroundId) {
-        this.backgroundId = backgroundId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getBackgroundName() {
-        return backgroundName;
+    public String getName() {
+        return name;
     }
 
-    public void setBackgroundName(String backgroundName) {
-        this.backgroundName = backgroundName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSkill1() {
+    public String getSkillOne() {
         return skillOne;
     }
 
-    public void setSkill1(String skill1) {
-        this.skillOne = skill1;
+    public void setSkillOne(String skillOne) {
+        this.skillOne = skillOne;
     }
 
-    public String getSkill2() {
+    public String getSkillTwo() {
         return skillTwo;
     }
 
-    public void setSkill2(String skill2) {
-        this.skillTwo = skill2;
+    public void setSkillTwo(String skillTwo) {
+        this.skillTwo = skillTwo;
     }
 
-    public int getLanguages() {
+    public int getLanguagesNumber() {
         return languagesNumber;
     }
 
-    public void setLanguages(int languages) {
-        this.languagesNumber = languages;
+    public void setLanguagesNumber(int languagesNumber) {
+        this.languagesNumber = languagesNumber;
     }
 
-    public String getTool1() {
+    public String getToolOne() {
         return toolOne;
     }
 
-    public void setTool1(String tool1) {
-        this.toolOne = tool1;
+    public void setToolOne(String toolOne) {
+        this.toolOne = toolOne;
     }
 
-    public int getTool2() {
+    public int getToolTwo() {
         return toolTwo;
     }
 
-    public void setTool2(int tool2) {
-        this.toolTwo = tool2;
+    public void setToolTwo(int toolTwo) {
+        this.toolTwo = toolTwo;
     }
 
-    public String getToolType1() {
+    public String getToolTypeOne() {
         return toolTypeOne;
     }
 
-    public void setToolType1(String toolType1) {
-        this.toolTypeOne = toolType1;
+    public void setToolTypeOne(String toolTypeOne) {
+        this.toolTypeOne = toolTypeOne;
     }
 
-    public int getToolType2() {
+    public int getToolTypeTwo() {
         return toolTypeTwo;
     }
 
-    public void setToolType2(int toolType2) {
-        this.toolTypeTwo = toolType2;
+    public void setToolTypeTwo(int toolTypeTwo) {
+        this.toolTypeTwo = toolTypeTwo;
     }
     
     
