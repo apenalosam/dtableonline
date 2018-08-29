@@ -3,30 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/ToolServiceImpl.java</file>
             <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/controller/PlayerSheetController.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Tool.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Language.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Race.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/ToolService.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/VehicleService.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Character.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Vehicle.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/CharacterServiceImpl.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Clas.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Campaign.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/VehicleServiceImpl.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/repository/RaceRepository.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/controller/UserController.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Background.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/User.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/service/RaceServiceImpl.java</file>
             <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/util/Util.java</file>
             <file>file:/C:/Users/KODE/Documents/dtableonline7/web/WEB-INF/views/dtable/player_sheet.jsp</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/repository/ToolRepository.java</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/application.properties</file>
-            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/repository/VehicleRepository.java</file>
+            <file>file:/C:/Users/KODE/Documents/dtableonline7/src/java/midknight/munch/dtable/model/Clas.java</file>
         </group>
     </open-files>
 </project-private>

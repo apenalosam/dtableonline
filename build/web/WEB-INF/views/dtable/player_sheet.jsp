@@ -10,41 +10,13 @@
 <script>
     //document.getElementById("body").setAttribute("background", "${contextPath}/resources/img/char_sheet.png");
     var isNew;
-    var addedRaceStats = false;
-    var addedClasStats = false;
     $(document).ready(function () {
         isNew = ${isNew};
-        resizable(document.getElementById('characterId'), 10);
-
         if ('${msg}' !== '') {
             alert('${msg}');
         }
-        if (!isNew) {
-            setCharacter();
-            addedRaceStats = true;
-        }
-        $('#strModifier').html(setMod($('#str').val()));
-        $('#dexModifier').html(setMod($('#dex').val()));
-        $('#conModifier').html(setMod($('#con').val()));
-        $('#intModifier').html(setMod($('#intl').val()));
-        $('#wisModifier').html(setMod($('#wis').val()));
-        $('#chaModifier').html(setMod($('#cha').val()));
-        $('#raceId').change(function () {
-            getRace($(this).val());
-        });
-        $('#classId').change(function () {
-            getClas($(this).val());
-        });
-        $('#alignId').change(function () {
-            getAlign($(this).val());
-        });
-        
-
-
-    });
-
-
-</script>
+       
+    });</script>
 <div class="hidden" id="loader"></div>
 <div class='div-bckImg' style="background-image: url('${contextPath}/resources/img/char_sheet.png'); position: static; height: 1740px">
     <form:form action="${contextPath}/dtable/save_sheet" id="sheet" method="POST" enctype="multipart/form-data" accept-charset="UTF-8"> 
@@ -133,7 +105,7 @@
                 <textarea class="stylish items no-border"></textarea>
             </div>
             <div class="input-group fifth-pane" style="min-width: 0px; width: 20px;">
-                <canvas id="strDiamond" style="margin-left:3px; background-color: #000000;border:1px solid #000000;transform: rotate(45deg); width:12px; height: 12px;"></canvas>
+                <canvas id="strDiamond" style="margin-left:3px; background-color: transparent;border:1px solid #000000;transform: rotate(45deg); width:12px; height: 12px;"></canvas>
                 <br/>
                 <input id="ath" value="ath" type="checkbox" class="form-control" onchange="chkBxStr(this)" style="width:18px; height: 18px; "/>
                 <br/>
@@ -256,50 +228,9 @@
 
 
 </div>
+<script src="${contextPath}/resources/js/functions.js"></script>
 <script>
     formData = new FormData($(this[0]));
-    function setMod(stat) {
-        if (stat > 19) {
-            return '+5';
-        }
-        else if (stat > 17) {
-            return '+4';
-        }
-        else if (stat > 15) {
-            return '+3';
-        }
-        else if (stat > 13) {
-            return '+2';
-        }
-        else if (stat > 11) {
-            return '+1';
-        }
-        else if (stat > 9) {
-            return '+0';
-        }
-        else if (stat > 7) {
-            return '-1';
-        }
-        else if (stat > 5) {
-            return '-2';
-        }
-        else if (stat > 3) {
-            return '-3';
-        }
-        else {
-            return '-4';
-        }
-    }
-    function resizable(el, factor) {
-        var int = Number(factor) || 7.7;
-        function resize() {
-            el.style.width = ((el.value.length + 1) * int) + 'px';
-        }
-        var e = 'keyup,keypress,focus,blur,change'.split(',');
-        for (var i in e)
-            el.addEventListener(e[i], resize, false);
-        resize();
-    }
     function setCharacter() {
         $('#playerName').text('${c.playerName}');
         $('#playerName').val('${c.playerName}');
@@ -316,7 +247,7 @@
         $('#raceId').val('${c.raceId}');
         getRace(${c.raceId});
         $('#alignId').val('${c.alignId}');
-        setClas();
+        getClas(${c.classId});
         setRace();
         setBackground();
     }
@@ -324,43 +255,48 @@
         var speeds = '';
         if ('${r.landSpeed}' !== "") {
             speeds += '${r.landSpeed}/';
-        }
-        else {
+        } else {
             speeds += '0/';
         }
         if ('${r.armorSpeed}' !== "") {
             speeds += '${r.armorSpeed}/';
-        }
-        else {
+        } else {
             speeds += '0/';
         }
         if ('${r.landSpeed}' !== "") {
             speeds += '${r.swimSpeed}';
-        }
-        else {
+        } else {
             speeds += '0';
         }
         $('#speed').html(speeds);
     }
     function setClas() {
         var saves = '${cl.saves}'.split("&;");
-        var stat1 = saves[0].substr(0,3);
-        var stat2 = saves[1].substr(0,3);
+        var stat1 = saves[0].substr(0, 3);
+        var stat2 = saves[1].substr(0, 3);
         $('#strSave').html('+0');
         $('#dexSave').html('+0');
         $('#conSave').html('+0');
         $('#intSave').html('+0');
         $('#wisSave').html('+0');
         $('#chaSave').html('+0');
-        var mod1 = parseInt($('#'+stat1+'Modifier').html().substr(1))+parseInt($('#profBonus').html().substr(1));
-        var mod2 = parseInt($('#'+stat2+'Modifier').html().substr(1))+parseInt($('#profBonus').html().substr(1));
-        $('#'+saves[0]).html('+'+mod1);
-        $('#'+saves[1]).html('+'+mod2);
-        $('#'+stat1+'Diamond').css("background-color", "#000000");
-        $('#'+stat2+'Diamond').css("background-color", "#000000");
+        var mod1Changer = parseInt($('#' + stat1 + 'Modifier').html().substr(1));
+        var mod2Changer = parseInt($('#' + stat2 + 'Modifier').html().substr(1));
+        if ($('#' + stat1 + 'Modifier').html().substr(0, 1) === '-') {
+            mod1Changer = (-1) * mod1Changer;
+        }
+        if ($('#' + stat2 + 'Modifier').html().substr(0, 1) === '-') {
+            mod2Changer = (-1) * mod2Changer;
+        }
+        var mod1 = mod1Changer + parseInt($('#profBonus').html().substr(1));
+        var mod2 = mod2Changer + parseInt($('#profBonus').html().substr(1));
+        $('#' + saves[0]).html('+' + mod1);
+        $('#' + saves[1]).html('+' + mod2);
+        $('#' + stat1 + 'Diamond').css("background-color", "#000000");
+        $('#' + stat2 + 'Diamond').css("background-color", "#000000");
         $('#maxHp').html('${cl.hitPoints + (cl.hitPointsOptional*(c.lvl-1))}');
         $('#hitDice').html($('#lvl').val());
-        $('#totalHitDice').html($('#lvl').val()+'d${cl.hitDie}');
+        $('#totalHitDice').html($('#lvl').val() + 'd${cl.hitDie}');
     }
     function setRace() {
         $('#raceStr').html('${r.baseStr}');
@@ -381,7 +317,7 @@
         $('#chaModifier').html(setMod(${r.baseCha}));
         setSpeed();
     }
-    function setBackground(){
+    function setBackground() {
         $('#backgroundId').val('${c.backgroundId}');
     }
     function getRace(selection) {
@@ -438,8 +374,46 @@
             cache: false,
             success: function (response) {
                 setHp(response.hitPoints, response.hitPointsOptional);
+                var saves = response.saves.split("&;");
+                var stat1 = saves[0].substr(0, 3);
+                var stat2 = saves[1].substr(0, 3);
+                if (addedClasStats) {
+                    $('#strSave').html('+0');
+                    $('#dexSave').html('+0');
+                    $('#conSave').html('+0');
+                    $('#intSave').html('+0');
+                    $('#wisSave').html('+0');
+                    $('#chaSave').html('+0');
+                }
+                var mod1Changer = parseInt($('#' + stat1 + 'Modifier').html().substr(1));
+                var mod2Changer = parseInt($('#' + stat2 + 'Modifier').html().substr(1));
+                var sign1 = '+';
+                var sign2 = '+';
+                if ($('#' + stat1 + 'Modifier').html().substr(0, 1) === '-') {
+                    mod1Changer = (-1) * mod1Changer;
+                }
+                if ($('#' + stat2 + 'Modifier').html().substr(0, 1) === '-') {
+                    mod2Changer = (-1) * mod2Changer;
+                }
+                var mod1 = mod1Changer + parseInt($('#profBonus').html().substr(1));
+                var mod2 = mod2Changer + parseInt($('#profBonus').html().substr(1));
+                if(mod1<0)
+                    sign1 = '';
+                if(mod2<0)
+                    sign2 = '';
+                $('#' + saves[0]).html(sign1 + mod1);
+                $('#' + saves[1]).html(sign2 + mod2);
+                $('#strDiamond').css("background-color", "transparent");
+                $('#dexDiamond').css("background-color", "transparent");
+                $('#conDiamond').css("background-color", "transparent");
+                $('#intDiamond').css("background-color", "transparent");
+                $('#wisDiamond').css("background-color", "transparent");
+                $('#chaDiamond').css("background-color", "transparent");
+                $('#' + stat1 + 'Diamond').css("background-color", "#000000");
+                $('#' + stat2 + 'Diamond').css("background-color", "#000000");
                 $('#hitDice').html($('#lvl').val());
-                $('#totalHitDice').html($('#lvl').val()+'d'+response.hitDie);
+                $('#totalHitDice').html($('#lvl').val() + 'd' + response.hitDie);
+                addedClasStats = true;
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 alert(jqXhr);
@@ -462,7 +436,7 @@
             }
         });
     }
-    function chkBxStr(item) {
+    /*function chkBxStr(item) {
         var lblName = item.id;
         lblName += 'Save';
         if ($(item).is(':checked')) {
@@ -504,9 +478,9 @@
             $('#' + lblName).html();
         }
     }
-    function setHp(hitDie, hpAdd){
-        var maxHp = parseInt(hitDie) + parseInt($('#conModifier').text()) + parseInt((hpAdd*($('#lvl').val()-1)));
+    function setHp(hitDie, hpAdd) {
+        var maxHp = parseInt(hitDie) + parseInt($('#conModifier').text()) + parseInt((hpAdd * ($('#lvl').val() - 1)));
         $('#maxHp').html(maxHp);
-    }
+    }*/
 </script>
 <%@ include file="../footer.jsp" %>
