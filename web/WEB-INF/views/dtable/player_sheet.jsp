@@ -185,9 +185,11 @@
                 <input name="currentHp" id="currentHp" type="number" style="width:300px;" class="form-control text-center stylish current-hp" value="${c.currentHp}"/>
                 <br/>
                 <div style="width:180px; margin-left:40px">
-                    <label id="totalHitDice" class="stylish text-center total-hit-dice">0</label>
-                    <br/>
-                    <label id="hitDice" class="stylish text-center hit-dice">0</label>
+                    <div style="width:50%">
+                        <label id="totalHitDice" class="stylish text-center total-hit-dice">0</label>
+                        <br/>
+                        <label id="hitDice" class="stylish text-center hit-dice">0</label>
+                    </div>
                 </div>                
                 <div style="width: 75px; margin-left: 60px;">
                     <input style="width:70px" name="cp" id="cp" type="number" class="currency form-control no-border text-center stylish" value="${c.cp}"/>
@@ -224,6 +226,7 @@
             <label id="typicalAlignment"></label>
             <label id="size"></label>
         </div>
+        <icon-toggle toggle-icon="star" pressed="{{isFav}}"></icon-toggle>
     </form:form>
 
 
