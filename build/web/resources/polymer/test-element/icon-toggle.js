@@ -1,5 +1,5 @@
-  import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-  import '../node_modules/@polymer/iron-icon/iron-icon.js';
+  import { PolymerElement, html } from './node_modules/@polymer/polymer/polymer-element.js';
+  import './node_modules/@polymer/iron-icon/iron-icon.js';
 
   class IconToggle extends PolymerElement {
     static get template() {
