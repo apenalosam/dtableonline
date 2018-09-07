@@ -7,6 +7,7 @@
 <%@ include file="../menu.jsp"%>
 <link href="${contextPath}/resources/js/plugins/jquery.typeahead.min.css" rel="stylesheet">
 <link href="${contextPath}/resources/js/plugins/toast/jquery.toast.css" rel="stylesheet">
+<script src="${contextPath}/resources/polymer/test-element/icon-toggle.js"></script>
 <script>
     //document.getElementById("body").setAttribute("background", "${contextPath}/resources/img/char_sheet.png");
     var isNew;

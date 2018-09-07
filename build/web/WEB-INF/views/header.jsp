@@ -15,5 +15,5 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="${contextPath}/resources/css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
         <script src="${contextPath}/resources/polymer/test-element/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-        <script type="module" src="${contextPath}/resources/polymer/test-element/demo/demo-element.js"></script>
+        <script type="module" src="${contextPath}/resources/polymer/elements/icon-toggle.js"></script>
         
