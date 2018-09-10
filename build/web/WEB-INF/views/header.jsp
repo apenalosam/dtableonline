@@ -14,6 +14,6 @@
         <script src="${contextPath}/resources/js/jquery-3.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="${contextPath}/resources/css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="${contextPath}/resources/polymer/test-element/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-        <script type="module" src="${contextPath}/resources/polymer/elements/icon-toggle.js"></script>
+        <!--script src="${contextPath}/resources/polymer/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script-->
+        <script type="module" src="${contextPath}/resources/polymer/elements/icon-toggle-finished/icon-toggle.js"></script>
         
